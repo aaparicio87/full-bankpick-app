@@ -10,7 +10,8 @@ app = FastAPI()
 app.include_router(api_router, prefix=settings.API_V1_STR)
 
 
-@app.get("/")
+@app.get("/healtcheck", tags=["health"])
 async def root():
-    """Root endpoint."""
-    return {"message": "Hello World"}
+    """Healthcheck endpoint."""
+    print(settings)
+    return {"message": "All working fine!"}
