@@ -1,0 +1,16 @@
+export const TEXTS = {
+    sample_mail: 'jhondoe@gmail.com',
+    email_address: 'Email Address',
+    password: 'Password',
+    confirm_password: 'Confirm Password',
+    sign_in: 'Sign in',
+    sign_up: 'Sign up',
+    new_user: 'I’m a new user.',
+    already_have_account: 'Already have an account?',
+    existing_user: 'Already have an account.',
+    full_name: 'Full Name',
+    sample_name: 'John Doe',
+    phone_number: 'Phone Number',
+    phone_number_placeholder: '+1 (555) 555-5555',
+    get_started: 'Get Started',
+}
