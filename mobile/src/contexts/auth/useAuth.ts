@@ -24,7 +24,7 @@ export const useAuth = (): Auth => {
     }, [])
 
     return {
-        isAuthenticated,
+        isAuthenticated: true,
         isLoading: false,
         completeOnboarding,
         handleTogleCompleteOnboarding,

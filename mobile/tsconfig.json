@@ -10,7 +10,8 @@
       "@hooks/*": ["./src/hooks/*"],
       "@styles/*": ["./src/styles/*"],
       "@storage": ["./src/storage/index"],
-      "@utils/*": ["./src/utils/*"]
-    }
-  }
+      "@utils/*": ["./src/utils/*"],
+      "@/types/*": ["./src/types/*"],
+    },
+  },
 }

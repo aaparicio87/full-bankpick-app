@@ -1,46 +1,49 @@
-import { Tabs } from 'expo-router';
-import { House, Wallet, ChartPie, Settings } from 'lucide-react-native';
-import { useCSSVariable } from 'uniwind';
-
+import { Tabs } from "expo-router";
+import { House, Wallet, ChartPie, Settings } from "lucide-react-native";
+import { useCSSVariable } from "uniwind";
 
 const TabLayout = () => {
-    const backgroundNavigation = useCSSVariable('--color-background')
+  const backgroundNavigation = useCSSVariable("--color-background-secondary");
 
-    return (
-        <Tabs screenOptions={{
-            headerShown: false,
-            tabBarStyle: { backgroundColor: backgroundNavigation?.toString() }
-        }}>
-            <Tabs.Screen
-                name="index"
-                options={{
-                    title: 'Home',
-                    tabBarIcon: ({ color }) => <House size={20} color={color} />,
-                }}
-            />
-            <Tabs.Screen
-                name="cards"
-                options={{
-                    title: 'My Cards',
-                    tabBarIcon: ({ color }) => <Wallet size={20} color={color} />,
-                }}
-            />
-            <Tabs.Screen
-                name="stats"
-                options={{
-                    title: 'Statistics',
-                    tabBarIcon: ({ color }) => <ChartPie size={20} color={color} />,
-                }}
-            />
-            <Tabs.Screen
-                name="settings"
-                options={{
-                    title: 'Settings',
-                    tabBarIcon: ({ color }) => <Settings size={20} color={color} />,
-                }}
-            />
-        </Tabs>
-    )
-}
+  return (
+    <Tabs
+      screenOptions={{
+        headerShown: false,
+        tabBarStyle: {
+          backgroundColor: backgroundNavigation?.toString(),
+        },
+      }}
+    >
+      <Tabs.Screen
+        name="index"
+        options={{
+          title: "Home",
+          tabBarIcon: ({ color }) => <House size={20} color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="cards"
+        options={{
+          title: "My Cards",
+          tabBarIcon: ({ color }) => <Wallet size={20} color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="stats"
+        options={{
+          title: "Statistics",
+          tabBarIcon: ({ color }) => <ChartPie size={20} color={color} />,
+        }}
+      />
+      <Tabs.Screen
+        name="settings"
+        options={{
+          title: "Settings",
+          tabBarIcon: ({ color }) => <Settings size={20} color={color} />,
+        }}
+      />
+    </Tabs>
+  );
+};
 
-export default TabLayout
+export default TabLayout;

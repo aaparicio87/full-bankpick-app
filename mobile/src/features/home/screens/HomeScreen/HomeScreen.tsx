@@ -1,11 +1,29 @@
-import { View, Text } from 'react-native'
+import { View } from "react-native";
+import TabScreenNavigation from "@components/TabScreenLayout/TabScreenLayout";
+import BankCard from "@components/BankCard/BankCard";
+import {
+  ProfileInfo,
+  SearchHome,
+  Actions,
+  Transactions,
+} from "../../components";
+import { useHome } from "@features/home/hooks/useHome";
+import { mockTransactions } from "@utils/mocks";
 
 const HomeScreen = () => {
-    return (
-        <View className="flex-1 justify-center items-center">
-            <Text>HomeScreen</Text>
-        </View>
-    )
-}
+  const { transactionActions } = useHome();
 
-export default HomeScreen
+  return (
+    <TabScreenNavigation className="mb-10 bg-amber-300">
+      <View className="flex-row justify-between items-center ">
+        <ProfileInfo />
+        <SearchHome />
+      </View>
+      <BankCard />
+      <Actions listOperations={transactionActions} />
+      <Transactions transactions={mockTransactions} />
+    </TabScreenNavigation>
+  );
+};
+
+export default HomeScreen;

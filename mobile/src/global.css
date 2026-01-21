@@ -1,57 +1,57 @@
-@import 'tailwindcss';
-@import 'uniwind';
+@import "tailwindcss";
+@import "uniwind";
 
 @layer theme {
-  :root {
-    --font-sans: 'Poppins-Regular';
-    --font-sans-medium: 'Poppins-Medium';
-    --font-sans-semibold: 'Poppins-SemiBold';
-    --font-sans-bold: 'Poppins-Bold';
+    :root {
+        --font-sans: "Poppins-Regular";
+        --font-sans-medium: "Poppins-Medium";
+        --font-sans-semibold: "Poppins-SemiBold";
+        --font-sans-bold: "Poppins-Bold";
 
-    @variant dark {
-      /* Backgrounds */
-      --color-background: #161622;
-      --color-background-secondary: #1E1E2d;
-      --color-card: #1f2937;
+        @variant dark {
+            /* Backgrounds */
+            --color-background: #161622;
+            --color-background-secondary: #1e1e2d;
+            --color-card: #25253d;
 
-      /* Text colors */
-      --color-foreground: #1e1e2d;
-      --color-foreground-secondary: #7e848d;
-      --color-muted-foreground: #a2a2a7;
+            /* Text colors */
+            --color-foreground: #1e1e2d;
+            --color-foreground-secondary: #7e848d;
+            --color-muted-foreground: #a2a2a7;
 
-      /* Borders */
-      --color-border: #232533;
-      --color-border-subtle: #1f2937;
+            /* Borders */
+            --color-border: #232533;
+            --color-border-subtle: #1f2937;
 
-      /* Interactive elements */
-      --color-primary: #0066ff;
-      --color-primary-hover: #2563eb;
-      --color-danger: #ff3f60;
-      --color-success: #10b981;
-      --color-warning: #f59e0b;
+            /* Interactive elements */
+            --color-primary: #0066ff;
+            --color-primary-hover: #2563eb;
+            --color-danger: #ff3f60;
+            --color-success: #10b981;
+            --color-warning: #f59e0b;
+        }
+
+        @variant light {
+            /* Backgrounds */
+            --color-background: #ffffff;
+            --color-background-secondary: #f4f4f4;
+            --color-card: #25253d;
+
+            /* Text colors */
+            --color-foreground: #1e1e2d;
+            --color-foreground-secondary: #7e848d;
+            --color-muted-foreground: #a2a2a7;
+
+            /* Borders */
+            --color-border: #f4f4f4;
+            --color-border-subtle: #f3f4f6;
+
+            /* Interactive elements */
+            --color-primary: #0066ff;
+            --color-primary-hover: #2563eb;
+            --color-danger: #ff3f60;
+            --color-success: #10b981;
+            --color-warning: #f59e0b;
+        }
     }
-
-    @variant light {
-      /* Backgrounds */
-      --color-background: #ffffff;
-      --color-background-secondary: #f4f4f4;
-      --color-card: #ffffff;
-
-      /* Text colors */
-      --color-foreground: #1e1e2d;
-      --color-foreground-secondary: #7e848d;
-      --color-muted-foreground: #a2a2a7;   
-
-      /* Borders */
-       --color-border: #f4f4f4;
-       --color-border-subtle: #f3f4f6;
-
-      /* Interactive elements */
-      --color-primary: #0066ff;
-      --color-primary-hover: #2563eb;
-      --color-danger: #ff3f60;
-      --color-success: #10b981;
-      --color-warning: #f59e0b;
-    }
-  }
 }
