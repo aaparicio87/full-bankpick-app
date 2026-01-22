@@ -17,7 +17,7 @@ export const Actions = ({ listOperations }: Props) => {
     const Icon = icon;
 
     return (
-      <View className="items-center gap-y-0.5">
+      <View className="items-center gap-y-1">
         <Pressable
           onPress={action}
           style={({ pressed }) => ({ opacity: pressed ? 0.2 : 1 })}

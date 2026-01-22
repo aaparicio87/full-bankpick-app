@@ -5,9 +5,14 @@ import { useCSSVariable } from "uniwind";
 
 type Props = PropsWithChildren & {
   className?: string;
+  contentClassName?: string;
 };
 
-const TabScreenNavigation = ({ children, className = "" }: Props) => {
+const TabScreenNavigation = ({
+  children,
+  className = "",
+  contentClassName = "flex-1 p-5",
+}: Props) => {
   const backgroundNavigation = useCSSVariable("--color-background");
   return (
     <SafeAreaView
@@ -15,7 +20,7 @@ const TabScreenNavigation = ({ children, className = "" }: Props) => {
       className={className}
       edges={["top"]}
     >
-      <View className="flex-1 p-5">{children}</View>
+      <View className={contentClassName}>{children}</View>
     </SafeAreaView>
   );
 };

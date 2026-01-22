@@ -6,7 +6,7 @@ type Props = {
   fullName: string;
 };
 
-export const ProfileInfo = ({ welcomeText, fullName }: Props) => {
+const ProfileInfo = ({ welcomeText, fullName }: Props) => {
   return (
     <View className="flex-1 flex-row items-center gap-2">
       <Image
@@ -22,3 +22,5 @@ export const ProfileInfo = ({ welcomeText, fullName }: Props) => {
     </View>
   );
 };
+
+export default ProfileInfo;

@@ -1,8 +1,9 @@
-import * as icons from "lucide-react-native/icons";
+import { IconsLucide } from "@/types/icon";
+import icons from "@utils/icons";
 import { useCSSVariable } from "uniwind";
 
 interface IconProps {
-  name: keyof typeof icons;
+  name: IconsLucide;
   color?: string;
   size?: number;
 }
