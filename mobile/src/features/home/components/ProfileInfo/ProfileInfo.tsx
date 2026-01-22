@@ -1,7 +1,12 @@
-import { Typography } from "@components/Typography/Typography";
 import { View, Image } from "react-native";
+import { Typography } from "@components/Typography/Typography";
 
-export const ProfileInfo = () => {
+type Props = {
+  welcomeText: string;
+  fullName: string;
+};
+
+export const ProfileInfo = ({ welcomeText, fullName }: Props) => {
   return (
     <View className="flex-1 flex-row items-center gap-2">
       <Image
@@ -9,11 +14,9 @@ export const ProfileInfo = () => {
         source={{ uri: "https://picsum.photos/seed/696/3000/2000" }}
       />
       <View>
-        <Typography size="xs" weight="normal" className="text-muted-foreground">
-          Welcome to the app!
-        </Typography>
+        <Typography className="text-muted-foreground">{welcomeText}</Typography>
         <Typography size="lg" weight="medium">
-          Jhon Doe
+          {fullName}
         </Typography>
       </View>
     </View>

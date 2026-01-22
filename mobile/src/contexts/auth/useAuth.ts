@@ -1,33 +1,36 @@
-import {  STORAGE_KEYS } from "@storage"
-import { useCallback, useState } from "react"
-import { useMMKVBoolean } from "react-native-mmkv"
+import { STORAGE_KEYS } from "@storage";
+import { useCallback, useState } from "react";
+import { useMMKVBoolean } from "react-native-mmkv";
 
 export interface Auth {
-    isAuthenticated: boolean | undefined
-    isLoading: boolean
-    completeOnboarding: boolean | undefined
-    handleTogleCompleteOnboarding: () => void
-    handleTogleAuthenticated: () => void
+  isAuthenticated: boolean | undefined;
+  isLoading: boolean;
+  completeOnboarding: boolean | undefined;
+  handleTogleCompleteOnboarding: () => void;
+  handleTogleAuthenticated: () => void;
 }
 
 export const useAuth = (): Auth => {
-    const [isAuthenticated, setIsAuthenticated] = useMMKVBoolean(STORAGE_KEYS.AUTHENTICATED)
-    const [completeOnboarding, setCompleteOnboarding] = useMMKVBoolean(STORAGE_KEYS.ONBORADING)
-   
-    
-    const handleTogleCompleteOnboarding = useCallback(() => {
-        setCompleteOnboarding((prevState) => !prevState)
-    }, [])
+  const [isAuthenticated, setIsAuthenticated] = useMMKVBoolean(
+    STORAGE_KEYS.AUTHENTICATED,
+  );
+  const [completeOnboarding, setCompleteOnboarding] = useMMKVBoolean(
+    STORAGE_KEYS.ONBORADING,
+  );
 
-    const handleTogleAuthenticated = useCallback(() => {
-        setIsAuthenticated((prevState) => !prevState)
-    }, [])
+  const handleTogleCompleteOnboarding = useCallback(() => {
+    setCompleteOnboarding((prevState) => !prevState);
+  }, []);
 
-    return {
-        isAuthenticated: true,
-        isLoading: false,
-        completeOnboarding,
-        handleTogleCompleteOnboarding,
-        handleTogleAuthenticated
-    }
-}
+  const handleTogleAuthenticated = useCallback(() => {
+    setIsAuthenticated((prevState) => !prevState);
+  }, []);
+
+  return {
+    isAuthenticated: true,
+    isLoading: false,
+    completeOnboarding,
+    handleTogleCompleteOnboarding,
+    handleTogleAuthenticated,
+  };
+};
