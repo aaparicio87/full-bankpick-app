@@ -9,7 +9,7 @@ type Props = PropsWithChildren & {
 const TabRightAction = ({ children, onPress = () => {} }: Props) => {
   return (
     <Pressable
-      className="rounded-full w-12 h-12 justify-center items-center bg-border"
+      className="rounded-full w-12 h-12 justify-center items-center bg-background-secondary"
       style={({ pressed }) => ({ opacity: pressed ? 0.5 : 1 })}
       onPress={onPress}
     >

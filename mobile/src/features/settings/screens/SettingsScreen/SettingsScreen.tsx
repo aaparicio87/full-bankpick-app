@@ -6,12 +6,8 @@ import { Typography } from "@components/Typography/Typography";
 
 import { SETTINGS_DATA } from "../../config/config";
 import { SettingItem, SettingSection } from "../../types/setting";
-import {
-  ItemSection,
-  ItemSectionSwitch,
-  ItemSeparator,
-  SectionFooter,
-} from "../../components";
+import { ItemSection, ItemSectionSwitch } from "../../components";
+import LineSeparator from "@components/LineSeparator/LineSeparator";
 
 const SettingsScreen = () => {
   const renderSectionHeader = useCallback(
@@ -36,7 +32,7 @@ const SettingsScreen = () => {
     if (item.type === "switch") {
       return <ItemSectionSwitch item={item} />;
     }
-    return null; // Always return null or a fallback for safety
+    return null;
   }, []);
 
   return (
@@ -47,13 +43,17 @@ const SettingsScreen = () => {
         keyExtractor={(item) => item.id}
         renderItem={renderItem}
         renderSectionHeader={renderSectionHeader}
-        ItemSeparatorComponent={ItemSeparator}
+        ItemSeparatorComponent={() => (
+          <LineSeparator contentClassName="mt-2 mb-4" />
+        )}
         contentContainerStyle={{ paddingBottom: 40 }}
         stickySectionHeadersEnabled={false}
         renderSectionFooter={({ section }) => {
           const isLastSection =
             section.title === SETTINGS_DATA[SETTINGS_DATA.length - 1].title;
-          return !isLastSection ? <SectionFooter /> : null;
+          return !isLastSection ? (
+            <LineSeparator contentClassName="mt-2 mb-4" />
+          ) : null;
         }}
       />
     </TabScreenNavigation>

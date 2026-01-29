@@ -1,6 +1,6 @@
+import { Switch, View } from "react-native";
 import { Typography } from "@components/Typography/Typography";
 import { SettingItem } from "../../types/setting";
-import { Switch, View } from "react-native";
 
 type Props = {
   item: SettingItem;

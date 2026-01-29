@@ -4,6 +4,7 @@ import { IconsLucide } from "@/types/icon";
 import ProfileInfo from "../ProfileInfo/ProfileInfo";
 import IconLucide from "../IconLucide/IconLucide";
 import TabRightAction from "../TabRightAction/TabRightAction";
+import { Typography } from "@components/Typography/Typography";
 
 type Props = {
   title?: string;
@@ -24,7 +25,16 @@ const TabHeader = ({
     <View
       className={`flex-row items-center ${!profile ? "justify-end" : "justify-between"}`}
     >
-      {profile && <ProfileInfo welcomeText={title} fullName={fullName} />}
+      {profile && (
+        <ProfileInfo>
+          <View>
+            <Typography className="text-muted-foreground">{title}</Typography>
+            <Typography size="lg" weight="medium">
+              {fullName}
+            </Typography>
+          </View>
+        </ProfileInfo>
+      )}
       <TabRightAction onPress={onPressAction}>
         <IconLucide name={iconName} size={18} />
       </TabRightAction>

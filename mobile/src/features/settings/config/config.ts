@@ -1,21 +1,25 @@
 import { SettingSection } from "../types/setting";
+import { router } from "expo-router";
 
 export const SETTINGS_DATA: SettingSection[] = [
   {
     title: "General",
     data: [
       {
+        id: "profile",
+        title: "My Profile",
+        type: "navigation",
+        onPress: () =>
+          router.navigate({
+            pathname: "/profile",
+          }),
+      },
+      {
         id: "language",
         title: "Language",
         type: "navigation",
         value: "English",
         onPress: () => console.log("Navigate to Language"),
-      },
-      {
-        id: "profile",
-        title: "My Profile",
-        type: "navigation",
-        onPress: () => console.log("Navigate to Profile"),
       },
       {
         id: "contact",

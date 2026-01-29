@@ -1,24 +1,19 @@
 import { View, Image } from "react-native";
-import { Typography } from "@components/Typography/Typography";
+import { PropsWithChildren } from "react";
 
-type Props = {
-  welcomeText: string;
-  fullName: string;
+type Props = PropsWithChildren & {
+  contentClassName?: string;
+  imageClassName?: string;
 };
 
-const ProfileInfo = ({ welcomeText, fullName }: Props) => {
+const ProfileInfo = ({ children, contentClassName, imageClassName }: Props) => {
   return (
-    <View className="flex-1 flex-row items-center gap-2">
+    <View className={contentClassName}>
       <Image
-        className="rounded-full w-12 h-12 bg-border  "
+        className={`rounded-full w-12 h-12 bg-border ${imageClassName}`}
         source={{ uri: "https://picsum.photos/seed/696/3000/2000" }}
       />
-      <View>
-        <Typography className="text-muted-foreground">{welcomeText}</Typography>
-        <Typography size="lg" weight="medium">
-          {fullName}
-        </Typography>
-      </View>
+      {children}
     </View>
   );
 };

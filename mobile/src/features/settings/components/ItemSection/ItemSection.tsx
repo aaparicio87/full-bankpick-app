@@ -2,12 +2,15 @@ import { Pressable, View } from "react-native";
 import { SettingItem } from "../../types/setting";
 import { Typography } from "@components/Typography/Typography";
 import IconLucide from "@components/IconLucide/IconLucide";
+import { useCSSVariable } from "uniwind";
 
 type Props = {
   item: SettingItem;
 };
 
 export const ItemSection = ({ item }: Props) => {
+  const iconColor = useCSSVariable("--color-foreground-secondary");
+
   return (
     <View>
       <Pressable
@@ -17,7 +20,11 @@ export const ItemSection = ({ item }: Props) => {
       >
         <View className="flex-row items-center justify-between pb-2.5">
           <View className="flex-1">
-            <Typography className="text-white" size="lg">
+            <Typography
+              className="text-foreground"
+              size="base"
+              weight="semibold"
+            >
               {item.title}
             </Typography>
           </View>
@@ -31,8 +38,11 @@ export const ItemSection = ({ item }: Props) => {
                 {item.value}
               </Typography>
             )}
-            {/* Using a chevron icon or the character from your image */}
-            <IconLucide name="ChevronRight" size={24} />
+            <IconLucide
+              name="ChevronRight"
+              size={24}
+              color={iconColor?.toString()}
+            />
           </View>
         </View>
       </Pressable>
