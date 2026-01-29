@@ -14,7 +14,12 @@ export const TEXTS = {
   phone_number_placeholder: "+1 (555) 555-5555",
   get_started: "Get Started",
   birth_date: "Birth Date",
-  birth_date_placeholder: "MM/DD/YYYY",
+  birth_date_placeholder: "MM/YYYY",
   expiry_date: "Expiry Date",
   cvv: "CVV",
+  cardHolder: "Cardholder Name",
+  fourth_digit: "4-digit CVV",
+  fourth_digit_placeholder: "1234",
+  card_number: "Card Number",
+  card_number_placeholder: "1234 5678 9012 3456",
 };

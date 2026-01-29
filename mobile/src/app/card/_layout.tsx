@@ -16,7 +16,7 @@ export default function CardLayout() {
       <Stack.Screen
         name="add_card"
         options={{
-          presentation: "fullScreenModal",
+          presentation: "containedModal",
           gestureEnabled: false,
         }}
       />

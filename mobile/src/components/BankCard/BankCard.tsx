@@ -10,7 +10,7 @@ type Props = {
   fullName: string;
   expiryDate: string;
   cvv: string;
-  paymentNetwork: PaymentNetwork;
+  paymentNetwork: PaymentNetwork | null;
   containerClassName?: string;
 };
 
@@ -69,16 +69,20 @@ const BankCard = ({
             </View>
           </View>
 
-          <View className={`justify-center gap-y-1 self-end`}>
-            <Image
-              source={{ uri: CARD_BRAND_ICONS[paymentNetwork] }}
-              className="w-8 h-5 self-end"
-              resizeMode="contain"
-            />
-            {paymentNetwork === "Matercard" && (
-              <Typography className=" text-white">{paymentNetwork}</Typography>
-            )}
-          </View>
+          {paymentNetwork && (
+            <View className={`justify-center gap-y-1 self-end`}>
+              <Image
+                source={{ uri: CARD_BRAND_ICONS[paymentNetwork] }}
+                className="w-8 h-5 self-end"
+                resizeMode="contain"
+              />
+              {paymentNetwork === "Matercard" && (
+                <Typography className=" text-white">
+                  {paymentNetwork}
+                </Typography>
+              )}
+            </View>
+          )}
         </View>
       </View>
     </View>
