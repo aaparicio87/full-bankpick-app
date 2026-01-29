@@ -1,10 +1,31 @@
 import { Image, View } from "react-native";
 import { Nfc } from "lucide-react-native";
 import { Typography } from "@components/Typography/Typography";
+import { PaymentNetwork } from "@/types/payment";
+import { TEXTS } from "@utils/texts";
+import { CARD_BRAND_ICONS } from "@utils/constants";
 
-const BankCard = () => {
+type Props = {
+  cardNumber: string;
+  fullName: string;
+  expiryDate: string;
+  cvv: string;
+  paymentNetwork: PaymentNetwork;
+  containerClassName?: string;
+};
+
+const BankCard = ({
+  cardNumber,
+  fullName,
+  expiryDate,
+  cvv,
+  paymentNetwork,
+  containerClassName,
+}: Props) => {
   return (
-    <View className="w-full h-48 bg-card rounded-2xl self-center my-8 relative">
+    <View
+      className={`w-full h-48 bg-card rounded-2xl self-center relative ${containerClassName}`}
+    >
       <Image
         source={{ uri: "worldmap" }}
         className="w-full h-full absolute"
@@ -26,35 +47,37 @@ const BankCard = () => {
             weight="normal"
             size="2xl"
           >
-            1234 5678 9012 3456
+            {cardNumber}
           </Typography>
           <Typography className=" text-white" weight="normal" size="sm">
-            AR Jonson
+            {fullName}
           </Typography>
         </View>
-        <View className="flex-row justify-between items-center">
+        <View className={`flex-row justify-between items-center`}>
           <View className="flex-row gap-x-8">
             <View className="gap-y-1">
               <Typography className="text-muted-foreground" size="xs">
-                Expiry Date
+                {TEXTS.expiry_date}
               </Typography>
-              <Typography className=" text-white">24/2000</Typography>
+              <Typography className=" text-white">{expiryDate}</Typography>
             </View>
             <View className="gap-y-1">
               <Typography className=" text-muted-foreground" size="xs">
-                CVV
+                {TEXTS.cvv}
               </Typography>
-              <Typography className=" text-white">6986</Typography>
+              <Typography className=" text-white">{cvv}</Typography>
             </View>
           </View>
 
-          <View className="justify-center gap-y-1">
+          <View className={`justify-center gap-y-1 self-end`}>
             <Image
-              source={{ uri: "master_card" }}
-              className="w-8 h-5 self-end "
+              source={{ uri: CARD_BRAND_ICONS[paymentNetwork] }}
+              className="w-8 h-5 self-end"
               resizeMode="contain"
             />
-            <Typography className=" text-white">Master Card</Typography>
+            {paymentNetwork === "Matercard" && (
+              <Typography className=" text-white">{paymentNetwork}</Typography>
+            )}
           </View>
         </View>
       </View>

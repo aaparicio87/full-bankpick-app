@@ -1,4 +1,5 @@
 import { Profile } from "../types/profile";
+import { router } from "expo-router";
 
 export const profileConfig: Profile[] = [
   {
@@ -17,7 +18,9 @@ export const profileConfig: Profile[] = [
     id: "cards",
     iconName: "Landmark",
     label: "Banks and Cards",
-    onPress: () => {},
+    onPress: () => {
+      router.push("/card");
+    },
   },
   {
     id: "notifications",

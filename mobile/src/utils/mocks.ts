@@ -1,4 +1,6 @@
 import { Transaction } from "../types/api";
+import { PAYMENT_NETWORKS } from "./constants";
+import { Card } from "@features/cards/types/cards";
 
 export const mockTransactions: Transaction[] = [
   {
@@ -52,5 +54,24 @@ export const mockTransactions: Transaction[] = [
     icon: "ShoppingCart",
     createdAt: 1742594961000,
     updatedAt: 1743020572000,
+  },
+];
+
+export const CARDS_LIST: Card[] = [
+  {
+    id: "1",
+    cardNumber: "1234 5678 9012 3456",
+    expiryDate: "12/25",
+    cvv: "123",
+    paymentNetwork: PAYMENT_NETWORKS.VISA,
+    fullName: "John Doe",
+  },
+  {
+    id: "2",
+    cardNumber: "9876 5432 1098 7654",
+    expiryDate: "01/26",
+    cvv: "456",
+    paymentNetwork: PAYMENT_NETWORKS.MASTERCARD,
+    fullName: "Jane Doe",
   },
 ];

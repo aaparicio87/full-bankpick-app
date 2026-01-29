@@ -50,6 +50,7 @@ export default ({ config }: ConfigContext): ExpoConfig => ({
           "./assets/images/worldmap.png",
           "./assets/images/circuit_card.png",
           "./assets/images/master_card.png",
+          "./assets/images/visa_card.png",
         ],
       },
     ],

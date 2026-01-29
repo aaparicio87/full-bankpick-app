@@ -10,6 +10,7 @@ type Props = {
   title?: string;
   nameLeft?: IconsLucide;
   nameRight?: IconsLucide;
+  hideLeft?: boolean;
 };
 
 const Header = ({
@@ -18,13 +19,16 @@ const Header = ({
   title,
   nameLeft = "ChevronLeft",
   nameRight,
+  hideLeft = false,
 }: Props) => {
   return (
     <View className="flex-row items-center">
       <View className="flex-1">
-        <TabRightAction onPress={handlePressLeft}>
-          <IconLucide name={nameLeft} size={18} />
-        </TabRightAction>
+        {!hideLeft && (
+          <TabRightAction onPress={handlePressLeft}>
+            <IconLucide name={nameLeft} size={18} />
+          </TabRightAction>
+        )}
       </View>
 
       <View className="flex-1 items-center">
