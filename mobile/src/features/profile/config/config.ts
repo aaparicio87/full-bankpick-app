@@ -19,7 +19,7 @@ export const profileConfig: Profile[] = [
     iconName: "Landmark",
     label: "Banks and Cards",
     onPress: () => {
-      router.push("/card");
+      router.push("/(app)/card");
     },
   },
   {

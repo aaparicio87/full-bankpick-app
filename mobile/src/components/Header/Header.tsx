@@ -23,7 +23,8 @@ const Header = ({
 }: Props) => {
   return (
     <View className="flex-row items-center">
-      <View className="flex-1">
+      {/* Left button - fixed width */}
+      <View className="w-12">
         {!hideLeft && (
           <TabRightAction onPress={handlePressLeft}>
             <IconLucide name={nameLeft} size={18} />
@@ -31,13 +32,15 @@ const Header = ({
         )}
       </View>
 
-      <View className="flex-1 items-center">
-        <Typography weight="semibold" size="base">
+      {/* Title - takes remaining space */}
+      <View className="flex-1 items-center px-2">
+        <Typography weight="semibold" size="base" className="text-center">
           {title}
         </Typography>
       </View>
 
-      <View className="flex-1 items-end">
+      {/* Right button - fixed width */}
+      <View className="w-12 items-end">
         {nameRight && (
           <TabRightAction onPress={handlePressRight}>
             <IconLucide name={nameRight} size={18} />

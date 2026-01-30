@@ -1,8 +1,9 @@
 import { Stack } from "expo-router";
 import { useCSSVariable } from "uniwind";
 
-export default function CardLayout() {
+export default function ProfileLayout() {
   const backgroundNavigation = useCSSVariable("--color-background");
+
   return (
     <Stack
       screenOptions={{
@@ -13,13 +14,9 @@ export default function CardLayout() {
       }}
     >
       <Stack.Screen name="index" />
-      <Stack.Screen
-        name="add_card"
-        options={{
-          presentation: "containedModal",
-          gestureEnabled: false,
-        }}
-      />
+      <Stack.Screen name="edit" />
+      <Stack.Screen name="language" />
+      <Stack.Screen name="change-password" />
     </Stack>
   );
 }

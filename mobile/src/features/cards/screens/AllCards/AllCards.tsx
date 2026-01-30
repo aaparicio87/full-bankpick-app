@@ -29,7 +29,7 @@ const AllCards = () => {
     <ScreenLayout>
       <Header
         nameRight="Plus"
-        handlePressRight={() => router.navigate("/card/add_card")}
+        handlePressRight={() => router.navigate("/(app)/card/add-card")}
         title="All Cards"
         handlePressLeft={handleBack}
       />

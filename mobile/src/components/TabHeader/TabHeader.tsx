@@ -12,6 +12,7 @@ type Props = {
   profile?: boolean;
   fullName?: string;
   iconName: IconsLucide;
+  profileClassName?: string;
 };
 
 const TabHeader = ({
@@ -20,13 +21,14 @@ const TabHeader = ({
   profile = false,
   fullName = "Jhon Doe",
   iconName,
+  profileClassName,
 }: Props) => {
   return (
     <View
       className={`flex-row items-center ${!profile ? "justify-end" : "justify-between"}`}
     >
       {profile && (
-        <ProfileInfo>
+        <ProfileInfo contentClassName={profileClassName}>
           <View>
             <Typography className="text-muted-foreground">{title}</Typography>
             <Typography size="lg" weight="medium">

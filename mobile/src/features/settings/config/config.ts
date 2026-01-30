@@ -11,7 +11,7 @@ export const SETTINGS_DATA: SettingSection[] = [
         type: "navigation",
         onPress: () =>
           router.navigate({
-            pathname: "/profile",
+            pathname: "/(app)/profile",
           }),
       },
       {
@@ -19,7 +19,10 @@ export const SETTINGS_DATA: SettingSection[] = [
         title: "Language",
         type: "navigation",
         value: "English",
-        onPress: () => console.log("Navigate to Language"),
+        onPress: () =>
+          router.navigate({
+            pathname: "/(app)/profile/language",
+          }),
       },
       {
         id: "contact",
@@ -36,7 +39,10 @@ export const SETTINGS_DATA: SettingSection[] = [
         id: "password",
         title: "Change Password",
         type: "navigation",
-        onPress: () => console.log("Navigate to Change Password"),
+        onPress: () =>
+          router.navigate({
+            pathname: "/(app)/profile/change-password",
+          }),
       },
       {
         id: "privacy",
