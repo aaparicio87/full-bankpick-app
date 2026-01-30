@@ -23,8 +23,12 @@ const LanguageScreen = () => {
 
   return (
     <ScreenLayout>
-      <Header handlePressLeft={handleBack} title="Language" />
-
+      <Header
+        title="Language"
+        hideLeft
+        nameRight="X"
+        handlePressRight={handleBack}
+      />
       <FlatList
         data={LANGUAGES}
         keyExtractor={(item) => item.id}

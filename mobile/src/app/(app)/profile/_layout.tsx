@@ -14,9 +14,6 @@ export default function ProfileLayout() {
       }}
     >
       <Stack.Screen name="index" />
-      <Stack.Screen name="edit" />
-      <Stack.Screen name="language" />
-      <Stack.Screen name="change-password" />
     </Stack>
   );
 }

@@ -13,13 +13,6 @@ export default function CardLayout() {
       }}
     >
       <Stack.Screen name="index" />
-      <Stack.Screen
-        name="add-card"
-        options={{
-          presentation: "containedModal",
-          gestureEnabled: false,
-        }}
-      />
     </Stack>
   );
 }

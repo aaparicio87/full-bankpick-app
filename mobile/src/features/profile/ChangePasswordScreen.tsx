@@ -12,7 +12,12 @@ const ChangePasswordScreen = () => {
 
   return (
     <ScreenLayout>
-      <Header handlePressLeft={handleBack} title="Change Password" />
+      <Header
+        title="Change Password"
+        hideLeft
+        nameRight="X"
+        handlePressRight={handleBack}
+      />
       <View className="mt-5 gap-2">
         <TextInput
           label={TEXTS.current_password}

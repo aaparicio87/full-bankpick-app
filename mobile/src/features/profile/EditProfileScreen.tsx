@@ -10,7 +10,12 @@ import { View } from "react-native";
 const EditProfileScreen = () => {
   return (
     <ScreenLayout>
-      <Header handlePressLeft={handleBack} title="Edit Profile" />
+      <Header
+        title="Edit Profile"
+        hideLeft
+        nameRight="X"
+        handlePressRight={handleBack}
+      />
       <ProfileInfo
         contentClassName="items-center my-3"
         imageClassName="w-18 h-18"

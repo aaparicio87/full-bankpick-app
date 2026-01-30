@@ -11,7 +11,7 @@ const ProfileScreen = () => {
   const router = useRouter();
 
   const handleEditProfile = () => {
-    router.push("/profile/edit");
+    router.push("(app)/(modals)/edit-profile-modal");
   };
 
   return (

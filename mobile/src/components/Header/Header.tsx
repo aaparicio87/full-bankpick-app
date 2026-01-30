@@ -5,7 +5,7 @@ import { Typography } from "../Typography/Typography";
 import { IconsLucide } from "@/types/icon";
 
 type Props = {
-  handlePressLeft: () => void;
+  handlePressLeft?: () => void;
   handlePressRight?: () => void;
   title?: string;
   nameLeft?: IconsLucide;

@@ -29,7 +29,9 @@ const AllCards = () => {
     <ScreenLayout>
       <Header
         nameRight="Plus"
-        handlePressRight={() => router.navigate("/(app)/card/add-card")}
+        handlePressRight={() =>
+          router.navigate("/(app)/(modals)/add-card-modal")
+        }
         title="All Cards"
         handlePressLeft={handleBack}
       />

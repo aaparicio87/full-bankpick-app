@@ -13,7 +13,12 @@ const HomeScreen = () => {
 
   return (
     <TabScreenNavigation className="mb-10">
-      <TabHeader profile onPressAction={() => {}} iconName="Search" />
+      <TabHeader
+        profile
+        onPressAction={() => {}}
+        iconName="Search"
+        profileClassName="flex-row items-center gap-2"
+      />
       <BankCard
         containerClassName="my-8"
         cardNumber="1234 5678 9012 3456"
