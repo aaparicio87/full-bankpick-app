@@ -1,11 +1,5 @@
 import { useMemo } from "react";
 import { TransactionAction } from "../types/transaction";
-import {
-  ArrowDown,
-  ArrowUp,
-  CircleDollarSign,
-  CloudUpload,
-} from "lucide-react-native";
 
 export const useHome = () => {
   const handleDeposit = () => {
@@ -30,25 +24,25 @@ export const useHome = () => {
     () => [
       {
         id: "deposit",
-        icon: ArrowDown,
+        icon: "ArrowDown",
         label: "Deposit",
         action: handleDeposit,
       },
       {
         id: "withdraw",
-        icon: ArrowUp,
+        icon: "ArrowUp",
         label: "Withdraw",
         action: handleWithdraw,
       },
       {
         id: "loan",
-        icon: CircleDollarSign,
+        icon: "CircleDollarSign",
         label: "Loan",
         action: handleTransfer,
       },
       {
         id: "top-up",
-        icon: CloudUpload,
+        icon: "CloudUpload",
         label: "Topup",
         action: handlePayBill,
       },

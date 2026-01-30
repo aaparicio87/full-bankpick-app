@@ -3,7 +3,7 @@ import icons from "@utils/icons";
 import { useCSSVariable } from "uniwind";
 import { LucideProps } from "lucide-react-native";
 
-interface IconProps extends Omit<LucideProps, "ref"> {
+export interface IconProps extends Omit<LucideProps, "ref"> {
   name: IconsLucide;
 }
 

@@ -25,6 +25,16 @@ export const SETTINGS_DATA: SettingSection[] = [
           }),
       },
       {
+        id: "theme",
+        title: "Theme",
+        type: "navigation",
+        value: "Light",
+        onPress: () =>
+          router.navigate({
+            pathname: "/(app)/(modals)/theme-modal",
+          }),
+      },
+      {
         id: "contact",
         title: "Contact Us",
         type: "navigation",

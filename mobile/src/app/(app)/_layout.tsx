@@ -38,9 +38,18 @@ export default function AppLayout() {
           },
         }}
       />
-
       <Stack.Screen
         name="(modals)/change-password-modal"
+        options={{
+          presentation: "containedModal",
+          gestureEnabled: false,
+          contentStyle: {
+            backgroundColor: backgroundNavigation?.toString(),
+          },
+        }}
+      />
+      <Stack.Screen
+        name="(modals)/theme-modal"
         options={{
           presentation: "containedModal",
           gestureEnabled: false,

@@ -34,7 +34,11 @@ const Header = ({
 
       {/* Title - takes remaining space */}
       <View className="flex-1 items-center px-2">
-        <Typography weight="semibold" size="base" className="text-center">
+        <Typography
+          weight="semibold"
+          size="base"
+          className="text-center text-foreground"
+        >
           {title}
         </Typography>
       </View>

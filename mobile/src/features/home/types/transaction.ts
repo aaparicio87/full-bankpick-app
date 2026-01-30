@@ -1,8 +1,8 @@
-import { LucideIcon } from "lucide-react-native";
+import { IconsLucide } from "@/types/icon";
 
 export interface TransactionAction {
   id: string;
-  icon: LucideIcon;
+  icon: IconsLucide;
   label: string;
   action: () => void;
 }

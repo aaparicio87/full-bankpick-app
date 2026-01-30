@@ -1,13 +1,14 @@
 import { useCallback } from "react";
 import { SectionList, View } from "react-native";
+
 import TabHeader from "@components/TabHeader/TabHeader";
 import TabScreenNavigation from "@components/TabScreenLayout/TabScreenLayout";
 import { Typography } from "@components/Typography/Typography";
+import LineSeparator from "@components/LineSeparator/LineSeparator";
 
 import { SETTINGS_DATA } from "../../config/config";
 import { SettingItem, SettingSection } from "../../types/setting";
 import { ItemSection, ItemSectionSwitch } from "../../components";
-import LineSeparator from "@components/LineSeparator/LineSeparator";
 
 const SettingsScreen = () => {
   const renderSectionHeader = useCallback(

@@ -1,4 +1,4 @@
-import { Language } from "../screens/LanguageScreen";
+import { Language } from "../types/language";
 
 export const LANGUAGES: Language[] = [
   {

@@ -1,4 +1,4 @@
-import LanguageScreen from "@features/language/screens/LanguageScreen";
+import LanguageScreen from "@features/settings/screens/LanguageScreen/LanguageScreen";
 
 export default function Language() {
   return <LanguageScreen />;
